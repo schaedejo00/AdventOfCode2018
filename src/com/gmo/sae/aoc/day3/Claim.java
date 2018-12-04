@@ -1,5 +1,9 @@
 package com.gmo.sae.aoc.day3;
 
+import com.gmo.sae.aoc.PatternHelper;
+
+import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,20 +17,16 @@ public class Claim {
     private boolean valid = true;
 
     public Claim(String config) {
-        Pattern pattern = Pattern.compile("[0-9]+");
-        Matcher matcher = pattern.matcher(config);
+        List<String> patternMatches = PatternHelper.matches(config, "[0-9]+");
 
-        int[] attr = new int[5];
-        int i = 0;
-        while (matcher.find()) {
-            attr[i] = Integer.valueOf(matcher.group());
-            i++;
-        }
-        id = attr[0];
-        leftPadding = attr[1];
-        topPadding = attr[2];
-        width = attr[3];
-        height = attr[4];
+
+        Iterator<String> matchesIt = patternMatches.iterator();
+
+        id = Integer.valueOf(matchesIt.next());
+        leftPadding = Integer.valueOf(matchesIt.next());
+        topPadding = Integer.valueOf(matchesIt.next());
+        width = Integer.valueOf(matchesIt.next());
+        height = Integer.valueOf(matchesIt.next());
 
     }
 

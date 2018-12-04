@@ -1,5 +1,7 @@
 package com.gmo.sae.aoc.day3;
 
+import com.gmo.sae.aoc.FileHelper;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,12 +13,8 @@ import java.util.List;
 public class Main1 {
 
     public static void main(String[] args) {
-        List<String> lines = new LinkedList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("inputDay3_1.txt"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                lines.add(line);
-            }
+        try {
+            List<String> lines = FileHelper.toLines("inputDay3_1.txt");
 
 
             Claim[] claims = new Claim[lines.size()];
