@@ -18,4 +18,15 @@ public class PatternHelper {
 
         return list;
     }
+
+    public static String getFirstMatch(String txt, String regex){
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(txt);
+
+        if (matcher.find()) {
+            return matcher.group();
+        }
+
+        return null;
+    }
 }
