@@ -2,12 +2,8 @@ package com.gmo.sae.aoc.day3;
 
 import com.gmo.sae.aoc.FileHelper;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main1 {
