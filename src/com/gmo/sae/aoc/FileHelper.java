@@ -21,5 +21,16 @@ public class FileHelper {
         return lines;
     }
 
+    public static String getLine(String fileName, int lineIndex) throws IOException {
+        List<String> lines = toLines(fileName);
+        if (lineIndex < lines.size()) {
+            return lines.get(lineIndex);
+        } else {
+            throw new IOException("Requested lineIndex=" + lineIndex + " from file='" + fileName +
+                    "', but file only contains " + lines.size() + " lines.");
+        }
+
+    }
+
 
 }
