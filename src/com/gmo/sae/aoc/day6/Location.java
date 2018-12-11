@@ -1,19 +1,20 @@
 package com.gmo.sae.aoc.day6;
 
-import java.awt.*;
+import com.gmo.sae.aoc.Point;
+
 import java.util.LinkedList;
 import java.util.List;
 
 public class Location {
 
-    private Point point;
+    private com.gmo.sae.aoc.Point point;
     private int id;
 
     private static int lastId = 0;
 
-    private List<Point> controlledFields;
+    private List<com.gmo.sae.aoc.Point> controlledFields;
 
-    public Point getPoint() {
+    public com.gmo.sae.aoc.Point getPoint() {
         return point;
     }
 
@@ -25,18 +26,18 @@ public class Location {
         this.id = id;
     }
 
-    public List<Point> getControlledFields() {
+    public List<com.gmo.sae.aoc.Point> getControlledFields() {
         return controlledFields;
     }
 
-    public void addControlledFields(Point controlledField) {
+    public void addControlledFields(com.gmo.sae.aoc.Point controlledField) {
         this.controlledFields.add(controlledField);
     }
 
     private Location(int id, int x, int y) {
         this.id = id;
         reset();
-        point = new Point(x, y);
+        point = new com.gmo.sae.aoc.Point(x, y);
     }
 
     public static Location createLocation(int x, int y) {

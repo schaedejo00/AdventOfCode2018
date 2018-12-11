@@ -1,4 +1,4 @@
-package com.gmo.sae.aoc.day6;
+package com.gmo.sae.aoc;
 
 public class Point {
 
@@ -35,5 +35,14 @@ public class Point {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public void move(int x, int y){
+        this.x = this.x + x;
+        this.y = this.y + y;
+    }
+
+    public boolean equals(Point point){
+        return this.getX()==point.getX() && this.getY()==point.getY();
     }
 }

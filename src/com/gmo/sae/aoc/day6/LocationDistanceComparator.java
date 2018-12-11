@@ -1,5 +1,7 @@
 package com.gmo.sae.aoc.day6;
 
+import com.gmo.sae.aoc.Point;
+
 import java.util.Comparator;
 
 public class LocationDistanceComparator implements Comparator<Location> {

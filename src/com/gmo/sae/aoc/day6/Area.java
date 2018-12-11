@@ -1,8 +1,8 @@
 package com.gmo.sae.aoc.day6;
 
 import com.gmo.sae.aoc.ArrayHelper;
+import com.gmo.sae.aoc.Point;
 
-import java.awt.*;
 import java.util.LinkedList;
 import java.util.List;
 
