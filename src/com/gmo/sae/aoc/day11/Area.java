@@ -1,9 +1,6 @@
 package com.gmo.sae.aoc.day11;
 
 public class Area {
-
-
-
     private PowerCell topLeft;
     private int totalPower;
     private int size;
